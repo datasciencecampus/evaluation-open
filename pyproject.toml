@@ -1,0 +1,46 @@
+[build-system]
+build-backend = "setuptools.build_meta"
+requires = ["setuptools>=61.0.0", "wheel"]
+
+[project]
+name = "evaluation-open"
+authors = [
+    {name = "Data Science Campus", email = "datasciencecampus@ons.gov.uk"}
+]
+description = "Example of policy evaluation project"
+readme = "README.md"
+requires-python = ">=3.9, <3.10"
+version = "0.0.1"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[project.urls]
+Repository = "https://github.com/datasciencecampus/evaluation-open"
+
+# `coverage` configurations
+[tool.coverage.run]
+source = [
+    "./src"
+]
+omit = ["**/__init__.py"]
+
+[tool.coverage.report]
+exclude_lines = [
+    "if __name__ == .__main__.:"
+]
+
+# `isort` configurations
+[tool.isort]
+profile = "black"
+
+# `pytest` configurations
+[tool.pytest.ini_options]
+addopts = [
+    "-vv",
+    "--doctest-modules"
+]
+doctest_optionflags = "NORMALIZE_WHITESPACE"
+testpaths = [
+    "./tests"
+]
