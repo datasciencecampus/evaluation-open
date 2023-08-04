@@ -1,6 +1,5 @@
 repos:
 # exclude: ^vendor/
-
 # ---- Pre-commit hooks ---- : Standard hook library
 - repo: https://github.com/pre-commit/pre-commit-hooks
   rev: v4.1.0
