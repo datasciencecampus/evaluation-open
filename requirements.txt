@@ -18,6 +18,7 @@ scpi_pkg
 seaborn==0.12.2
 statsmodels==0.13.5
 testfixtures==7.0.0
+pytest-lazy-fixture
 toml==0.10.2
 folium
 mapclassify
