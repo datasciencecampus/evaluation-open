@@ -1,6 +1,25 @@
 ### Project structure ###
 data/*
 outputs/*
+.git_ignore/
+log/*
+!log/.gitkeep
+
+# Ignore the contents of the `data` sub-folders, except for their `.gitkeep`
+# files; adapted from https://stackoverflow.com/a/20652768
+!data/**/
+data/external/*
+data/raw/*
+data/interim/*
+data/processed/*
+data/geographies/*
+!data/external/.gitkeep
+!data/raw/.gitkeep
+!data/interim/.gitkeep
+!data/processed/.gitkeep
+!data/geographies/.gitkeep
+
+outputs/*
 
 ### Contentious file types (can be removed at user discretion) ###
 
